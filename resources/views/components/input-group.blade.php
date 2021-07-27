@@ -24,6 +24,7 @@
 'errorOption' => [
 ],
 'disableFieldError' => false,
+'hideErrorOnType' => true,
 ])
 
 @php
@@ -48,7 +49,7 @@ if($iconOption['prefix'] === false){
       @endif
   
     </div>
-    <input id="{{ $id }}" name="{{ $name }}" class="form-control" placeholder="{{ $placeholder }}" type="{{ $type }}">
+    <input id="{{ $id }}" name="{{ $name }}" class="lara-b4-input form-control @if($hideErrorOnType) lara-b4-input-hide-error @endif" placeholder="{{ $placeholder }}" type="{{ $type }}">
   </div>
   @if($help)
   <small id="{{ $helpOption['id'] }}" class="{{ $helpOption['class'] }}">{{ $help }}</small>
