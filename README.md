@@ -1,5 +1,6 @@
+# Customized bootstrap 4 components for Laravel framework.
 
-## Available soon
+## Documentation will be available soon
 
 ## License
 
