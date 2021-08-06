@@ -23,12 +23,13 @@
 		if(config.loaderOnSubmit){
 			var btn_content = btn.html();
 			btn.html('<span class="d-inline-flex align-items-center"><span class="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></span>'+btn.data('loading-text')+'</span>');
+			btn.addClass('disabled').prop('disabled',true)
 		}
 	}
 
 	function prepareLaraB4Input(input,config = {}){
 		if(config.hideErrorOnChange){
-			input.closest('.form-group').find('.invalid-feedback').remove();
+			input.removeClass('is-invalid').closest('.form-group').find('.invalid-feedback').remove();
 		}
 	}
 	

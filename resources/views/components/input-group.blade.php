@@ -2,6 +2,8 @@
 [
 'id'=> "",
 'name'=> "",
+'value'=> "",
+'old'=> true,
 "type" => 'text',
 'placeholder' => "",
 'label'=> "",
