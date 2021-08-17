@@ -1,6 +1,7 @@
-{{-- @props(
+@props(
 [
 'id'=> "",
+'name'=> "",
 'label'=> "",
 'labelOption'=> [
   'id' => '',
@@ -12,19 +13,17 @@
   'class' => 'form-text text-muted',
 ],
 'error' => "",
-'errorOption' => [
-],
 'disableFieldError' => false,
 ])
-
-<div class="form-group">
+ 
+<div {{ $attributes->merge(['class' => 'form-group']) }} id="{{ $id }}">
   @if($label) 
   <label id="{{ $labelOption['id'] }}" class="{{ $labelOption['class'] }}">{{ $label }}</label> 
-  @endif
-    
+  @endif  
+
   {{ $slot }}
   <x-lara-b4::input-error :error="($error ? $error : ( !$disableFieldError ? $name : ''))" />
   @if($help)
   <small id="{{ $helpOption['id'] }}" class="{{ $helpOption['class'] }}">{{ $help }}</small>
   @endif
-</div> --}}
+</div>
